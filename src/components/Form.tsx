@@ -33,7 +33,7 @@ export default function Form({ labels, onSubmit }: any) {
       <label htmlFor="username" className="sm:text-base text-xl text-center">
         {labels}
       </label>
-      <div className="flex flex-col sm:p-0 gap-4 sm:gap-0">
+      <div className="flex flex-col sm:p-0 gap-4 sm:gap-0 ">
         <input
           value={username}
           onChange={(e) => {

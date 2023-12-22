@@ -13,8 +13,6 @@ export default function Home() {
     setUser(e);
   }
 
-  console.log(user);
-
   return (
     <>
       {Object.keys(user).length > 0 ? (
@@ -39,7 +37,7 @@ export default function Home() {
           <p className="sm:text-xl sm:font-bold">
             Insira seu nome de usuário github
           </p>
-          <div className="flex flex-col items-center pt-10 pb-10 sm:px-16 sm:py-6 gap-16 border-2 rounded-xl border-[black] bg-woodsmoke-700 shadow-background shadow-2xl backdrop-blur-xl bg-opacity-10">
+          <div className="flex p-9 flex-col items-center pt-10 pb-10 sm:px-16 sm:py-6 gap-16 border-2 rounded-xl border-[black] bg-woodsmoke-700 shadow-background shadow-2xl backdrop-blur-xl bg-opacity-10">
             <FaGithub size={250} className="text-zinc-200" />
             <Form labels="Nome de usuário:" onSubmit={handleUserSubmit} />
           </div>
