@@ -3,7 +3,7 @@ import { InfoItem } from "../../interface/interfaces";
 
 export default function Infos({ label, value, icon }: InfoItem) {
   return (
-    <ul className="flex gap-4">
+    <ul className="sm:text-base text-2xl flex gap-4">
       <Image src={icon} alt={label} width={20} height={20} />
 
       {value == null
