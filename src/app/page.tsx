@@ -18,18 +18,20 @@ export default function Home() {
   return (
     <>
       {Object.keys(user).length > 0 ? (
-        <main className="flex h-screen flex-col sm:justify-center sm:flex-row flex-wrap px-10 pt-5 items-center sm:p-16 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black">
-          <Card user={user} />
-          <Form
-            labels="Procurar outro perfil github!"
-            onSubmit={handleUserSubmit}
-          />
-          <button
-            className=" border-woodsmoke-600 px-2 py-1 rounded-lg hover:bg-woodsmoke-800 ease-in-out transition "
-            onClick={() => setUser({})}
-          >
-            limpar
-          </button>
+        <main className="flex h-screen flex-col items-center justify-center sm:justify-center flex-wrap px-10 pt-5 sm:pt-16 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+            <Card user={user} />
+            <Form
+              labels="Procurar outro perfil github!"
+              onSubmit={handleUserSubmit}
+            />
+            <button
+              className=" border-woodsmoke-600 px-2 py-1 rounded-lg hover:bg-woodsmoke-800 ease-in-out transition "
+              onClick={() => setUser({})}
+            >
+              limpar
+            </button>
+          </div>
           <Footer />
         </main>
       ) : (
