@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <>
       {Object.keys(user).length > 0 ? (
-        <main className="flex h-screen flex-col items-center justify-center sm:justify-center flex-wrap px-10 pt-5 sm:pt-16 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+        <main className="flex flex-col items-center justify-center flex-wrap px-10 pt-5 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black sm:h-screen sm:justify-center sm:pt-16">
+          <div className="flex flex-col justify-center items-center gap-8 sm:flex-row">
             <Card user={user} />
             <Form
               labels="Procurar outro perfil github!"
@@ -35,9 +35,9 @@ export default function Home() {
           <Footer />
         </main>
       ) : (
-        <main className="flex flex-col flex-wrap h-screen items-center sm:pt-16 pt-16 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black ">
+        <main className="flex flex-col h-screen flex-wrap items-center pt-5 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black sm:h-screen ">
           <p className="text-xl font-bold">Insira seu nome de usuário github</p>
-          <div className="flex flex-col items-center  py-24 px-16  sm:px-16 sm:py-6 gap-16 border-2 rounded-xl border-[black] bg-woodsmoke-700 shadow-background shadow-2xl backdrop-blur-xl bg-opacity-10">
+          <div className="flex flex-col items-center  pt-24 pb-10 px-4  sm:px-16 sm:py-6 gap-16 border-2 rounded-xl border-[black] bg-woodsmoke-700 shadow-background shadow-2xl backdrop-blur-xl bg-opacity-10">
             <FaGithub size={250} className="text-zinc-200" />
             <Form labels="Nome de usuário:" onSubmit={handleUserSubmit} />
           </div>

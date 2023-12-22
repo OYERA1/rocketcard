@@ -34,7 +34,7 @@ export default function Form({ labels, onSubmit }: any) {
       <label htmlFor="username" className="sm:text-base text-2xl">
         {labels}
       </label>
-      <div className="flex flex-col">
+      <div className="flex flex-col p-4 sm:p-0 gap-4 sm:gap-0">
         <input
           value={username}
           onChange={(e) => {
@@ -44,7 +44,7 @@ export default function Form({ labels, onSubmit }: any) {
           type="text"
           id="username"
           autoComplete="off"
-          className="text-2xl sm:text-base bg-zinc-300 shadow-inherit rounded outline-0 py-1 pl-2 font-bold text-woodsmoke-800"
+          className="text-xl sm:text-base bg-zinc-300 shadow-inherit rounded outline-0 py-1 pl-2 font-bold text-woodsmoke-800"
         />
         <button
           type="submit"
