@@ -28,13 +28,12 @@ export default function Form({ labels, onSubmit }: any) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex 
-      flex-col items-center gap-5 sm:gap-20"
+      className="flex flex-col items-center gap-5 sm:gap-20"
     >
-      <label htmlFor="username" className="sm:text-base text-2xl">
+      <label htmlFor="username" className="sm:text-base text-xl text-center">
         {labels}
       </label>
-      <div className="flex flex-col p-4 sm:p-0 gap-4 sm:gap-0">
+      <div className="flex flex-col sm:p-0 gap-4 sm:gap-0">
         <input
           value={username}
           onChange={(e) => {
@@ -44,7 +43,7 @@ export default function Form({ labels, onSubmit }: any) {
           type="text"
           id="username"
           autoComplete="off"
-          className="text-xl sm:text-base bg-zinc-300 shadow-inherit rounded outline-0 py-1 pl-2 font-bold text-woodsmoke-800"
+          className=" sm:text-base bg-zinc-300 shadow-inherit rounded outline-0 py-1 pl-2 font-bold text-woodsmoke-800"
         />
         <button
           type="submit"

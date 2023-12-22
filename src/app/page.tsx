@@ -36,8 +36,10 @@ export default function Home() {
         </main>
       ) : (
         <main className="flex flex-col h-screen flex-wrap items-center pt-5 gap-8 bg-gradient-to-br from-gray-700 via-gray-900 to-black sm:h-screen ">
-          <p className="text-xl font-bold">Insira seu nome de usuário github</p>
-          <div className="flex flex-col items-center  pt-24 pb-10 px-4  sm:px-16 sm:py-6 gap-16 border-2 rounded-xl border-[black] bg-woodsmoke-700 shadow-background shadow-2xl backdrop-blur-xl bg-opacity-10">
+          <p className="sm:text-xl sm:font-bold">
+            Insira seu nome de usuário github
+          </p>
+          <div className="flex flex-col items-center pt-10 pb-10 sm:px-16 sm:py-6 gap-16 border-2 rounded-xl border-[black] bg-woodsmoke-700 shadow-background shadow-2xl backdrop-blur-xl bg-opacity-10">
             <FaGithub size={250} className="text-zinc-200" />
             <Form labels="Nome de usuário:" onSubmit={handleUserSubmit} />
           </div>
